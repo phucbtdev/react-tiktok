@@ -27,7 +27,6 @@
     margin-left: 8px;
 }
 
-// Button types
 .rounded {
     border-radius: 999px;
     box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
@@ -39,6 +38,7 @@
     }
 }
 
+// Button types
 .primary {
     color: var(--white);
     background-color: var(--primary);
