@@ -1,9 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { publicRoutes } from '~/routes/';
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <div className="App">
         <Routes>
           {
@@ -22,7 +22,7 @@ function App() {
           }
         </Routes>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
