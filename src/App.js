@@ -7,7 +7,7 @@ function App() {
       <div className="App">
         <Routes>
           {
-            publicRoutes.map(({ path, component: Component, layout: Layout, index }) => {
+            publicRoutes.map(({ path, component: Component, layout: Layout }, index) => {
 
               return <Route
                 key={index}

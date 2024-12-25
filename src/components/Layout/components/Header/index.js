@@ -16,7 +16,20 @@ const cx = classNames.bind(styles);
 const MENU_ITEMS = [
       {
             icon: <FontAwesomeIcon icon={faEarthAsia}></FontAwesomeIcon>,
-            title: 'English'
+            title: 'English',
+            children: {
+                  childrenTitle: 'Language',
+                  data: [
+                        {
+                              code: 'en',
+                              title: 'English',
+                        },
+                        {
+                              code: 'vi',
+                              title: 'Vietnamese'
+                        }
+                  ]
+            }
       },
       {
             icon: <FontAwesomeIcon icon={faEarthAsia}></FontAwesomeIcon>,
@@ -34,7 +47,7 @@ function Header() {
 
       useEffect(() => {
             setTimeout(() => {
-                  setSearchResult([1]);
+                  setSearchResult([]);
             }, 0);
       }, []);
 
