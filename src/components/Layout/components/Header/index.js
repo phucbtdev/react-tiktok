@@ -12,6 +12,8 @@ import Button from '~/components/Button';
 import AccountItem from '~/components/AccountItem';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import Menu from '~/components/Popper/Menu';
+import { UploadIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
@@ -129,7 +131,7 @@ function Header() {
                                     <>
                                           <Tippy content="Upload video">
                                                 <button className={cx('action-btn')}>
-                                                      <FontAwesomeIcon icon={faCloudUpload}></FontAwesomeIcon>
+                                                      <UploadIcon></UploadIcon>
                                                 </button>
                                           </Tippy>
                                     </>
@@ -143,10 +145,11 @@ function Header() {
 
                               <Menu items={isLogin ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                                     {isLogin ? (
-                                          <img
+                                          <Image
                                                 className={cx('user-avatar')}
                                                 src="https://i.pinimg.com/736x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg"
                                                 alt="Nguyen Van A"
+                                                fallBack="https://i.pinimg.com/736x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg"
                                           />
                                     ) : (
                                           <button className={cx('more-btn')}>
